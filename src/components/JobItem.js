@@ -1,11 +1,13 @@
-import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { jobItem } from '../styles';
 
 const JobItem = (props) => {
-    console.log(props.job)
+ 
     return (
-        <TouchableOpacity onPress={props.onSelect}>
-            <Text>{props.job.title}</Text>
+        <TouchableOpacity onPress={props.onSelect}  style={jobItem.container}  >
+            <Text style={jobItem.jobname}>{props.job.title}</Text>
+            <Text>{props.job.type} / {props.job.location}</Text>
         </TouchableOpacity>
     )
 }
